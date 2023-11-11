@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 //Constants
 #define LABOR 0.35
 #define TAX 0.085
