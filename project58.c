@@ -11,7 +11,7 @@ int main() {
     int parkingHours, parkingMinutes;
     int roundedHours;
     double parkingFee = 0.0;
-    char vehicleName[4];  // Reduced array size
+    char vehicleName[6];  // Reduced array size
 
     // Input vehicle type using the recursive function
     vehicleType = getValidVehicleType();
@@ -31,7 +31,8 @@ int main() {
 
     // Check if the parking times are valid
     if (inHours < 0 || inHours >= 24 || inMinutes < 0 || inMinutes >= 60 ||
-        outHours < 0 || outHours >= 24 || outMinutes < 0 || outMinutes >= 60) {
+        outHours < 0 || outHours >= 24 || outMinutes < 0 || outMinutes >= 60) 
+    {
         printf("Invalid parking times. Please enter valid hours and minutes.\n");
         return 1;  // Exit with an error code
     }
@@ -40,7 +41,8 @@ int main() {
     getParkingTime(inHours, inMinutes, outHours, outMinutes, &parkingHours, &parkingMinutes);
 
     // Adjust parkingMinutes if it's greater than or equal to 60
-    if (parkingMinutes >= 60) {
+    if (parkingMinutes >= 60) 
+    {
         parkingMinutes %= 60;
         parkingHours += 1;
     }
@@ -50,27 +52,37 @@ int main() {
 
     // Process
     // Calculate parking fee based on the given fee structure and type of vehicle.
-    switch (vehicleType) {
+    switch (vehicleType) 
+    {
         case 'c':
-            if (parkingHours <= 3) {
+            if (parkingHours <= 3) 
+            {
                 parkingFee = 0.0;
-            } else {
+            } 
+            else 
+            {
                 parkingFee = (parkingHours - 3) * 1.50 + parkingMinutes / 60.0 * 1.50;
             }
             strcpy(vehicleName, "Car");
             break;
         case 'b':
-            if (parkingHours <= 3) {
+            if (parkingHours <= 3) 
+            {
                 parkingFee = parkingHours * 2.00 + parkingMinutes / 60.0 * 2.00;
-            } else {
+            } 
+            else 
+            {
                 parkingFee = 3 * 2.00 + (parkingHours - 3) * 3.70 + parkingMinutes / 60.0 * 3.70;
             }
             strcpy(vehicleName, "Bus");
             break;
         case 't':
-            if (parkingHours <= 3) {
+            if (parkingHours <= 3) 
+            {
                 parkingFee = parkingHours * 1.00 + parkingMinutes / 60.0 * 1.00;
-            } else {
+            } 
+            else 
+            {
                 parkingFee = 3 * 1.00 + (parkingHours - 3) * 2.30 + parkingMinutes / 60.0 * 2.30;
             }
             strcpy(vehicleName, "Truck");
