@@ -9,7 +9,7 @@
 // Functions
 void gradeInput(int *Fgrade, int *Sgrade, int *Tgrade);    // Function to input grades
 int calcGrade(int frstScore, int sndScore, int thrdScore); // Function to Calculate Grades
-void printGrade(int finalGrade);                           // Function to Print Grades
+void printGrade(int fstGrade, int sndGrade, int thrdGrade, int avr);                           // Function to Print Grades
 
 int main()
 {
@@ -20,7 +20,7 @@ int main()
     // Function Calls
     gradeInput(&score1, &score2, &score3);
     average = calcGrade(score1, score2, score3);
-    printGrade(average);
+    printGrade(score1, score2 , score3, average);
 
     return 0;
 }
@@ -29,11 +29,12 @@ void gradeInput(int *Fgrade, int *Sgrade, int *Tgrade)
 {
     printf("Enter First Grade: \n");
     scanf("%d", Fgrade);
+
     printf("Enter Second Grade: \n");
     scanf("%d", Sgrade);
+
     printf("Enter Third Grade: \n");
     scanf("%d", Tgrade);
-
     return;
 }
 
@@ -44,26 +45,28 @@ int calcGrade(int frstScore, int sndScore, int thrdScore)
     return average;
 }
 
-void printGrade(int finalGrade)
+void printGrade(int fstGrade, int sndGrade, int thrdGrade, int avr)
 {
     char averageinLetter;
-
-    if (finalGrade >= 90)
-    {
+    int avr2grades = (sndGrade + thrdGrade) / 2;
+    
+    if (avr >= 90)
         averageinLetter = 'A';
-    }
-    else if (finalGrade >= 70)
+    else if (avr >= 70 && avr < 90) 
     {
-        averageinLetter = 'B';
+        if (thrdGrade > 90) 
+            averageinLetter = 'A';
+        else 
+            averageinLetter = 'B';
     }
-    else if (finalGrade >= 50)
+    else if (avr >= 50 && avr < 70)
     {
-        averageinLetter = 'C';
+      if (avr2grades > 70) 
+            averageinLetter = 'C';
+      else 
+            averageinLetter = 'D';
     }
     else
-    {
         averageinLetter = 'F';
-    }
-
     printf("\nAverage is: %c\n", averageinLetter);
 }
