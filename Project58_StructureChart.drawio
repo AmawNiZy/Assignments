@@ -1,41 +1,49 @@
-<mxfile host="app.diagrams.net" modified="2023-12-18T11:08:30.938Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="QfaElZwZUGOrlVKldkbo" version="22.1.11" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-18T11:46:18.954Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="UxPFW5_kpoTXJOP137PY" version="22.1.11" type="github">
   <diagram name="Page-1" id="DQpOZpL87_V8DIYBofK0">
     <mxGraphModel dx="866" dy="454" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="w9eloDd8VWGRNMEEayhf-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;" parent="1" source="w9eloDd8VWGRNMEEayhf-1" target="w9eloDd8VWGRNMEEayhf-2" edge="1">
+        <mxCell id="w9eloDd8VWGRNMEEayhf-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="w9eloDd8VWGRNMEEayhf-1" target="SQRBaqaFPlblWfPP262O-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="w9eloDd8VWGRNMEEayhf-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;" parent="1" source="w9eloDd8VWGRNMEEayhf-1" target="w9eloDd8VWGRNMEEayhf-20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="w9eloDd8VWGRNMEEayhf-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;" parent="1" source="w9eloDd8VWGRNMEEayhf-1" target="w9eloDd8VWGRNMEEayhf-20" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="w9eloDd8VWGRNMEEayhf-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="w9eloDd8VWGRNMEEayhf-1" target="SQRBaqaFPlblWfPP262O-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="605" y="410" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="w9eloDd8VWGRNMEEayhf-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;" parent="1" source="w9eloDd8VWGRNMEEayhf-1" target="w9eloDd8VWGRNMEEayhf-5" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="w9eloDd8VWGRNMEEayhf-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=15;" parent="1" source="w9eloDd8VWGRNMEEayhf-1" target="SQRBaqaFPlblWfPP262O-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="410" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="w9eloDd8VWGRNMEEayhf-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="w9eloDd8VWGRNMEEayhf-1" target="w9eloDd8VWGRNMEEayhf-33" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="w9eloDd8VWGRNMEEayhf-71" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=15;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="w9eloDd8VWGRNMEEayhf-1" target="SQRBaqaFPlblWfPP262O-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425" y="410" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="w9eloDd8VWGRNMEEayhf-71" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="w9eloDd8VWGRNMEEayhf-1" target="w9eloDd8VWGRNMEEayhf-69" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="w9eloDd8VWGRNMEEayhf-1" value="Parking Time for Vehicles" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" parent="1" vertex="1">
+        <mxCell id="w9eloDd8VWGRNMEEayhf-1" value="Parking Time for Vehicles" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" parent="1" vertex="1">
           <mxGeometry x="365" y="250" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="w9eloDd8VWGRNMEEayhf-2" value="Input Valid Vehicle Type" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="40" y="410" width="120" height="60" as="geometry" />
+        <mxCell id="w9eloDd8VWGRNMEEayhf-20" value="Display Output" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" parent="1" vertex="1">
+          <mxGeometry x="700" y="410" width="140" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="w9eloDd8VWGRNMEEayhf-5" value="Calculate Cost Depending on the type of valid vehicle and Parking times" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="520" y="410" width="170" height="60" as="geometry" />
+        <mxCell id="SQRBaqaFPlblWfPP262O-1" value="Input Valid Vehicle Type" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="10" y="410" width="140" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="w9eloDd8VWGRNMEEayhf-20" value="Display Output" style="rounded=0;whiteSpace=wrap;html=1;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="700" y="410" width="120" height="60" as="geometry" />
+        <mxCell id="SQRBaqaFPlblWfPP262O-2" value="Input Time in and&amp;nbsp; Time out" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="160" y="410" width="160" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="w9eloDd8VWGRNMEEayhf-33" value="Input Time in and Time out" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="200" y="410" width="120" height="60" as="geometry" />
+        <mxCell id="SQRBaqaFPlblWfPP262O-3" value="Determine if Inputs are Valid" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="341" y="410" width="168" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="w9eloDd8VWGRNMEEayhf-69" value="Determine If&amp;nbsp; Inputs are Valid" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="365" y="410" width="120" height="60" as="geometry" />
+        <mxCell id="SQRBaqaFPlblWfPP262O-4" value="Calculate Cost Depending on the type of valid vehicle and Parking times" style="rounded=0;whiteSpace=wrap;html=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="520" y="410" width="170" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
