@@ -23,12 +23,6 @@ int main() {
     printf("Minute Vehicle Entered Lot (0 - 60)? ");
     scanf("%d", &inMinutes);
 
-    // Handle the case where inMinutes is greater than 60
-    if (inMinutes >= 60) {
-        inHours += inMinutes / 60;
-        inMinutes %= 60;
-    }
-
     // Vehicle time Left (Hours)
     printf("Hour Vehicle Left Lot (0 - 24)? ");
     scanf("%d", &outHours);
@@ -37,17 +31,31 @@ int main() {
     printf("Minutes Vehicle Left Lot (0 - 60)? ");
     scanf("%d", &outMinutes);
 
-    // Handle the case where outMinutes is greater than 60
-    if (outMinutes >= 60) {
+    // Handle the case where outMinutes is greater than or equal to 60
+    if (inMinutes >= 60) 
+    {
+        inHours += inMinutes / 60;
+        inMinutes %= 60;
+    }
+    // Handle the case where outMinutes is greater than or equal to 60
+    if (outMinutes >= 60) 
+    {
         outHours += outMinutes / 60;
         outMinutes %= 60;
     }
 
     // Process
     // Check if the parking times are valid
-    if (inHours < 0 || inMinutes < 0 || inMinutes >= 60 ||
-        outHours < 0 || outMinutes < 0 || outMinutes >= 60) {
+    if (inHours < 0 || inHours >= 24 || inMinutes < 0 || inMinutes > 60 ||
+        outHours < 0 || outHours >= 24 || outMinutes < 0 || outMinutes > 60) 
+    {
         printf("Invalid parking times. Please enter valid hours and minutes.\n");
+        return 1;  // Exit with an error code
+    }
+
+    // Check if the vehicle is getting towed
+    if (inHours >= 24 || outHours >= 24) {
+        printf("You are getting towed.\n");
         return 1;  // Exit with an error code
     }
 
