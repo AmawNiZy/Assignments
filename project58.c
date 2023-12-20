@@ -2,7 +2,6 @@
 #include <string.h>
 
 char getValidVehicleType();
-
 int getParkingTime(int inHours, int inMinutes, int outHours, int outMinutes, int *hours, int *minutes);
 
 int main() {
@@ -11,88 +10,90 @@ int main() {
     int parkingHours, parkingMinutes;
     int roundedHours;
     double parkingFee = 0.0;
-    char vehicleName[6];  // Reduced array size
+    char vehicleName[6];  // Array to return String
 
     // Input vehicle type using the recursive function
     vehicleType = getValidVehicleType();
 
     // Vehicle time Enter (Hours)
     printf("Hour Vehicle Entered Lot (0 - 24)? ");
-    scanf("%d", &inHours); 
+    scanf("%d", &inHours);
+
     // Vehicle time Enter (Minutes)
     printf("Minute Vehicle Entered Lot (0 - 60)? ");
     scanf("%d", &inMinutes);
+
+    // Handle the case where inMinutes is greater than 60
+    if (inMinutes >= 60) {
+        inHours += inMinutes / 60;
+        inMinutes %= 60;
+    }
+
     // Vehicle time Left (Hours)
     printf("Hour Vehicle Left Lot (0 - 24)? ");
     scanf("%d", &outHours);
-    // Vehicle time Enter (Hours)
+
+    // Vehicle time Left (Minutes)
     printf("Minutes Vehicle Left Lot (0 - 60)? ");
     scanf("%d", &outMinutes);
 
+    // Handle the case where outMinutes is greater than 60
+    if (outMinutes >= 60) {
+        outHours += outMinutes / 60;
+        outMinutes %= 60;
+    }
+
+    // Process
     // Check if the parking times are valid
-    if (inHours < 0 || inHours >= 24 || inMinutes < 0 || inMinutes >= 60 ||
-        outHours < 0 || outHours >= 24 || outMinutes < 0 || outMinutes >= 60) 
-    {
+    if (inHours < 0 || inMinutes < 0 || inMinutes >= 60 ||
+        outHours < 0 || outMinutes < 0 || outMinutes >= 60) {
         printf("Invalid parking times. Please enter valid hours and minutes.\n");
         return 1;  // Exit with an error code
     }
 
-    // Parking Time
+    // Output
+    // Gets the Parking Time
     getParkingTime(inHours, inMinutes, outHours, outMinutes, &parkingHours, &parkingMinutes);
 
-    // Adjust parkingMinutes if it's greater than or equal to 60
-    if (parkingMinutes >= 60) 
-    {
+    // Convert parkingMinutes to hours if it's greater than or equal to 60
+    if (parkingMinutes >= 60) {
+        parkingHours += parkingMinutes / 60;
         parkingMinutes %= 60;
-        parkingHours += 1;
     }
 
-    // Calculate rounded hours based on the total parking time
+    /* Calculate rounded hours based on the total parking time.
+    If parking minutes are greater than 30, Adds 1 hour to the parking time and resets the parking minutes to 0. */
     roundedHours = (parkingMinutes >= 30) ? parkingHours + 1 : parkingHours;
 
-    // Process
     // Calculate parking fee based on the given fee structure and type of vehicle.
-    switch (vehicleType) 
-    {
+    switch (vehicleType) {
         case 'c':
-            if (parkingHours <= 3) 
-            {
+            if (roundedHours <= 3) 
                 parkingFee = 0.0;
-            } 
             else 
-            {
-                parkingFee = (parkingHours - 3) * 1.50 + parkingMinutes / 60.0 * 1.50;
-            }
+                parkingFee = (roundedHours - 3) * 1.50 + parkingMinutes / 60.0 * 1.50;
             strcpy(vehicleName, "Car");
             break;
         case 'b':
-            if (parkingHours <= 3) 
-            {
-                parkingFee = parkingHours * 2.00 + parkingMinutes / 60.0 * 2.00;
-            } 
+            if (roundedHours <= 3) 
+                parkingFee = roundedHours * 2.00 + parkingMinutes / 60.0 * 2.00;
             else 
-            {
-                parkingFee = 3 * 2.00 + (parkingHours - 3) * 3.70 + parkingMinutes / 60.0 * 3.70;
-            }
+                parkingFee = 3 * 2.00 + (roundedHours - 3) * 3.70 + parkingMinutes / 60.0 * 3.70;
             strcpy(vehicleName, "Bus");
             break;
         case 't':
-            if (parkingHours <= 3) 
-            {
-                parkingFee = parkingHours * 1.00 + parkingMinutes / 60.0 * 1.00;
-            } 
+            if (roundedHours <= 3) 
+                parkingFee = roundedHours * 1.00 + parkingMinutes / 60.0 * 1.00;
             else 
-            {
-                parkingFee = 3 * 1.00 + (parkingHours - 3) * 2.30 + parkingMinutes / 60.0 * 2.30;
-            }
+                parkingFee = 3 * 1.00 + (roundedHours - 3) * 2.30 + parkingMinutes / 60.0 * 2.30;
             strcpy(vehicleName, "Truck");
             break;
+
         default:
             printf("Invalid vehicle type. Please enter c, b, or t.\n");
             return 1;  // Exit with an error code
-    }
+    }   
 
-    // Output
     printf("\n\t\tPARKING LOT CHANGE\t\t\t\n");
     printf("Type of Vehicle: %s\n", vehicleName);
     printf("TIME-IN\t\t\t\t    %02d:%02d\n", inHours, inMinutes);
@@ -116,7 +117,7 @@ char getValidVehicleType() {
     // Validate the input with recursion
     if (vehicleType != 'c' && vehicleType != 'b' && vehicleType != 't') {
         printf("Invalid vehicle type. Please enter c, b, or t.\n");
-        return getValidVehicleType();  // repeat until input is right
+        return getValidVehicleType();  // Ask for input again
     }
 
     return vehicleType;
